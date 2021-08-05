@@ -1,9 +1,7 @@
 <?php
-
 namespace App\Controllers;
 use App\Models\TimestampModel;
 use App\Models\PresensiModel;
-
 class PiketController extends BaseController
 {
     public function __construct()
@@ -19,6 +17,7 @@ class PiketController extends BaseController
 			$data['kelas'] = $this->presensi->getKelasPiket();
 			$data['selectedKelas'] = $selectedKelas;
 			return view('piket/index', $data);
+			//return view('piket/index', $data);
 		} else {
 			return redirect()->to('/');
 		}
